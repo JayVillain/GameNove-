@@ -1,0 +1,53 @@
+/* --- Gaya Umum untuk Seluruh Halaman HTML --- */
+body {
+    margin: 0;
+    overflow: hidden; /* Mencegah scroll di halaman */
+    display: flex; /* Menggunakan Flexbox untuk centering */
+    justify-content: center; /* Pusatkan horizontal */
+    align-items: center; /* Pusatkan vertikal */
+    min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang bersih */
+    color: white; /* Warna teks default */
+    background-color: #1a1a1a; /* Warna latar belakang gelap default */
+}
+
+/* --- Gaya Khusus untuk Layar Judul (index.html) --- */
+#title-screen-container {
+    position: relative;
+    width: 100vw; /* Lebar penuh viewport */
+    height: 100vh; /* Tinggi penuh viewport */
+    display: flex;
+    flex-direction: column; /* Elemen diatur secara kolom */
+    justify-content: center;
+    align-items: center;
+    /* Latar belakang layar judul - Ganti URL gambar kamu */
+    background-image: url('images/backgrounds/bg-title-screen.jpg');
+    background-size: cover; /* Pastikan gambar menutupi seluruh area */
+    background-position: center; /* Pusatkan gambar latar belakang */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efek bayangan pada teks */
+}
+
+#title-screen-container h1 {
+    font-size: 4em; /* Ukuran font judul */
+    margin-bottom: 30px; /* Jarak bawah dari tombol */
+    color: #ffd700; /* Warna emas untuk judul */
+    letter-spacing: 2px; /* Jarak antar huruf */
+}
+
+#start-game-button {
+    background-color: #4CAF50; /* Warna hijau khas */
+    color: white;
+    padding: 15px 40px; /* Padding di dalam tombol */
+    border: none; /* Hilangkan border default */
+    border-radius: 8px; /* Sudut tombol membulat */
+    cursor: pointer; /* Kursor berubah jadi pointer saat diarahkan */
+    font-size: 1.8em; /* Ukuran font tombol */
+    font-weight: bold; /* Teks tebal */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Efek transisi saat hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Efek bayangan tombol */
+}
+
+#start-game-button:hover {
+    background-color: #45a049; /* Warna hijau lebih gelap saat hover */
+    transform: translateY(-2px); /* Tombol sedikit terangkat saat hover */
+}

@@ -1,0 +1,24 @@
+MyVisualNovelGame/
+├── index.html                  <- Halaman Judul
+├── style.css                   <- CSS global (bisa juga dipakai oleh index.html)
+├── script.js                   <- JS global (opsional, jika ada fungsi global)
+│
+├── images/
+│   ├── backgrounds/
+│   │   ├── bg-title-screen.jpg
+│   │   ├── bg-rainy-night-street.jpg
+│   │   ├── bg-ramalia-house-interior.jpg
+│   │   └── bg-campus-yard.jpg
+│   └── characters/
+│       ├── char-zan-normal.png
+│       └── char-ramalia-normal.png
+│
+├── bab1/                       <- Folder untuk Bab 1
+│   ├── bab1.html
+│   ├── bab1.css                <- CSS spesifik Bab 1
+│   └── bab1.js                 <- JS spesifik Bab 1
+│
+└── bab2/                       <- Folder untuk Bab 2
+    ├── bab2.html
+    ├── bab2.css                <- CSS spesifik Bab 2
+    └── bab2.js                 <- JS spesifik Bab 2
