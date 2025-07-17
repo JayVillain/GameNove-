@@ -1,0 +1,130 @@
+/*
+    Gaya untuk Bab 2 ini akan sama persis dengan bab1.css
+    Ini karena struktur game-container, dialogue-box, dll. adalah standar.
+    Jika nanti ada elemen visual yang unik untuk Bab 2 saja,
+    kamu bisa menambahkannya di sini tanpa memengaruhi bab lain.
+*/
+
+/* --- Gaya Umum untuk Seluruh Halaman HTML Bab 2 --- */
+body {
+    margin: 0;
+    overflow: hidden; /* Mencegah scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: #1a1a1a; /* Warna latar belakang default jika gambar belum load */
+}
+
+/* --- Gaya untuk Game Container --- */
+#game-container {
+    position: relative;
+    width: 1280px; /* Ukuran standar untuk visual novel */
+    height: 720px;
+    background-color: #000; /* Latar belakang hitam untuk game container */
+    overflow: hidden;
+    border: 2px solid #555;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Gaya untuk Gambar Latar Belakang dan Karakter --- */
+#background, #character {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi area tanpa distorsi */
+    transition: opacity 0.5s ease-in-out; /* Efek fade in/out untuk gambar */
+}
+
+#character {
+    width: auto; /* Agar tidak terdistorsi lebarnya */
+    height: 90%; /* Sesuaikan tinggi karakter */
+    bottom: 0; /* Posisikan karakter di bagian bawah */
+    left: 50%; /* Pusatkan karakter secara horizontal */
+    transform: translateX(-50%); /* Penyesuaian agar benar-benar di tengah */
+    object-fit: contain; /* Memastikan karakter tetap dalam rasio aspeknya */
+    z-index: 10; /* Pastikan karakter di atas latar belakang */
+}
+
+/* --- Gaya untuk Kotak Dialog --- */
+#dialogue-box {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.8); /* Latar belakang semi-transparan */
+    padding: 20px;
+    border-radius: 10px;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+    z-index: 20; /* Pastikan kotak dialog di atas karakter */
+    border: 1px solid #777; /* Border tipis */
+}
+
+#character-name {
+    font-weight: bold;
+    color: #fce205; /* Warna kuning emas untuk nama karakter */
+    margin-bottom: 5px;
+    font-size: 1.2em;
+}
+
+#dialogue-text {
+    margin: 0;
+    line-height: 1.6; /* Jarak antar baris teks */
+    font-size: 1.1em;
+}
+
+/* --- Gaya untuk Tombol Lanjutkan --- */
+#next-button {
+    background-color: #007bff; /* Biru terang */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    float: right; /* Posisikan tombol ke kanan */
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#next-button:hover {
+    background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+}
+
+/* --- Gaya untuk Wadah Pilihan --- */
+#choices-container {
+    position: absolute;
+    bottom: 150px; /* Di atas kotak dialog */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: flex;
+    flex-direction: column; /* Pilihan disusun vertikal */
+    gap: 10px; /* Jarak antar tombol pilihan */
+    z-index: 25; /* Di atas kotak dialog */
+    /* Akan disembunyikan secara default, lalu ditampilkan oleh JS */
+    display: none;
+}
+
+/* --- Gaya untuk Tombol Pilihan --- */
+.choice-button {
+    background-color: rgba(70, 130, 180, 0.9); /* Biru baja, semi-transparan */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.choice-button:hover {
+    background-color: rgba(70, 130, 180, 1); /* Warna solid saat hover */
+    transform: translateY(-1px); /* Sedikit terangkat saat hover */
+}
