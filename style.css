@@ -6,9 +6,9 @@ body {
     justify-content: center; /* Pusatkan horizontal */
     align-items: center; /* Pusatkan vertikal */
     min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang bersih */
-    color: white; /* Warna teks default */
-    background-color: #1a1a1a; /* Warna latar belakang gelap default */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang bersih dan modern */
+    color: #E0E0E0; /* Warna teks off-white, lebih lembut dari putih murni */
+    background-color: #1E2A3B; /* Latar belakang dark slate blue, lebih kaya dari hitam */
 }
 
 /* --- Gaya Khusus untuk Layar Judul (index.html) --- */
@@ -20,34 +20,36 @@ body {
     flex-direction: column; /* Elemen diatur secara kolom */
     justify-content: center;
     align-items: center;
-    /* Latar belakang layar judul - Ganti URL gambar kamu */
-    background-image: url('images/backgrounds/bg-title-screen.jpg');
+    /* Latar belakang layar judul - SESUAIKAN DENGAN NAMA FILE DARI KAMU */
+    background-image: url('images/backgrounds/bg-title-screen.jpg'); /* TETAP INI SESUAI SCREENSHOT */
     background-size: cover; /* Pastikan gambar menutupi seluruh area */
     background-position: center; /* Pusatkan gambar latar belakang */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Efek bayangan pada teks */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Efek bayangan pada teks yang lebih dalam */
 }
 
 #title-screen-container h1 {
-    font-size: 4em; /* Ukuran font judul */
-    margin-bottom: 30px; /* Jarak bawah dari tombol */
-    color: #ffd700; /* Warna emas untuk judul */
-    letter-spacing: 2px; /* Jarak antar huruf */
+    font-size: 4.5em; /* Sedikit lebih besar */
+    margin-bottom: 40px; /* Jarak bawah dari tombol yang lebih lega */
+    color: #FFD700; /* Tetap emas, tapi akan terlihat lebih kontras dengan latar baru */
+    letter-spacing: 3px; /* Jarak antar huruf lebih renggang */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); /* Bayangan yang lebih kuat untuk judul */
 }
 
 #start-game-button {
-    background-color: #4CAF50; /* Warna hijau khas */
-    color: white;
-    padding: 15px 40px; /* Padding di dalam tombol */
+    background-color: #4682B4; /* Warna steel blue yang lebih elegan */
+    color: #FFFFFF; /* Teks putih */
+    padding: 18px 45px; /* Padding sedikit lebih besar */
     border: none; /* Hilangkan border default */
-    border-radius: 8px; /* Sudut tombol membulat */
+    border-radius: 10px; /* Sudut tombol lebih membulat */
     cursor: pointer; /* Kursor berubah jadi pointer saat diarahkan */
-    font-size: 1.8em; /* Ukuran font tombol */
+    font-size: 2em; /* Ukuran font tombol lebih besar */
     font-weight: bold; /* Teks tebal */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Efek transisi saat hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Efek bayangan tombol */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transisi lebih halus */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Efek bayangan tombol lebih kuat */
 }
 
 #start-game-button:hover {
-    background-color: #45a049; /* Warna hijau lebih gelap saat hover */
-    transform: translateY(-2px); /* Tombol sedikit terangkat saat hover */
+    background-color: #366E99; /* Warna steel blue lebih gelap saat hover */
+    transform: translateY(-3px); /* Tombol sedikit terangkat saat hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Bayangan lebih kuat saat hover */
 }

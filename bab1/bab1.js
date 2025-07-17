@@ -12,8 +12,8 @@ const storyChapter1 = [
     // Scene 0: Hujan Deras di Halte - Zan bicara
     {
         type: "dialogue",
-        background: "../images/backgrounds/bg-rainy-night-street.jpg",
-        character: "../images/characters/char-zan-normal.png",
+        background: "../images/backgrounds/jalan.png", // <--- PERUBAHAN NAMA FILE DI SINI
+        character: "../images/characters/zan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         name: "Zan",
         text: "Gimana? Masih mau nunggu angkutan yang nggak bakal lewat? Udah jam segini, nggak ada lagi. Atau lo mau tidur di sini sampai pagi?",
         next: 1 // Lanjut ke scene berikutnya
@@ -21,7 +21,7 @@ const storyChapter1 = [
     // Scene 1: Ramalia ragu, Zan mendesak
     {
         type: "dialogue",
-        background: "../images/backgrounds/bg-rainy-night-street.jpg",
+        background: "../images/backgrounds/jalan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         character: "", // Mungkin Ramalia tidak langsung terlihat jelas, atau hanya siluet
         name: "Narator", // Atau nama karakter lain jika dia berbicara dalam hati
         text: "Ramalia merasa dilema. Di satu sisi, reputasi Zan dan keraguannya akan 'niat' Zan membuatnya enggan. Di sisi lain, dia benar-benar tidak punya pilihan lain. Dia juga tidak ingin Zan menganggapnya sok jual mahal atau meremehkan bantuannya.",
@@ -30,8 +30,8 @@ const storyChapter1 = [
     // Scene 2: Pilihan Ramalia
     {
         type: "choice",
-        background: "../images/backgrounds/bg-rainy-night-street.jpg",
-        character: "../images/characters/char-zan-normal.png", // Zan tetap terlihat menunggu
+        background: "../images/backgrounds/jalan.png", // <--- PERUBAHAN NAMA FILE DI SINI
+        character: "../images/characters/zan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         text: "Apa yang akan Ramalia lakukan?",
         choices: [
             { text: "Baiklah, terima kasih, Zan.", next: 3 }, // Mengiyakan, lanjut ke cerita
@@ -42,8 +42,8 @@ const storyChapter1 = [
     // Scene 3: Zan Melesat Pergi (Jika Ramalia setuju)
     {
         type: "dialogue",
-        background: "../images/backgrounds/bg-rainy-night-street.jpg",
-        character: "../images/characters/char-zan-normal.png", // Zan tetap terlihat
+        background: "../images/backgrounds/jalan.png", // <--- PERUBAHAN NAMA FILE DI SINI
+        character: "../images/characters/zan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         name: "Zan",
         text: "Oke, naik.",
         next: 5 // Lanjut ke perjalanan pulang
@@ -52,7 +52,7 @@ const storyChapter1 = [
     // Scene 4: Ramalia Menolak Zan & Game Over
     {
         type: "dialogue",
-        background: "../images/backgrounds/bg-rainy-night-street.jpg",
+        background: "../images/backgrounds/jalan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         character: "",
         name: "Ramalia",
         text: "Tidak, terima kasih, Zan. Aku... aku akan menunggu saja.",
@@ -61,7 +61,7 @@ const storyChapter1 = [
     // Scene 5: Perjalanan Pulang yang Canggung (Jika Ramalia Menerima)
     {
         type: "dialogue",
-        background: "../images/backgrounds/bg-rainy-night-street.jpg", // Masih hujan
+        background: "../images/backgrounds/jalan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         character: "", // Mungkin tidak ada karakter yang jelas terlihat di perjalanan
         name: "Narator",
         text: "Ramalia akhirnya naik ke motor Zan. Sepanjang perjalanan, tidak ada dialog berarti. Hanya suara motor Zan yang membelah hujan. Ramalia berpegangan erat karena dingin dan takut terpeleset, menciptakan kedekatan fisik yang tidak terduga.",
@@ -70,8 +70,8 @@ const storyChapter1 = [
     // Scene 6: Tiba di Rumah Ramalia
     {
         type: "dialogue",
-        background: "../images/backgrounds/bg-ramalia-house-interior.jpg", // Ganti ke interior rumah
-        character: "../images/characters/char-zan-normal.png",
+        background: "../images/backgrounds/rumah.png", // <--- PERUBAHAN NAMA FILE DI SINI
+        character: "../images/characters/zan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         name: "Ramalia",
         text: "Terima kasih banyak, Zan. Aku... aku tidak tahu harus bagaimana kalau tidak ada kamu.",
         next: 7
@@ -79,8 +79,8 @@ const storyChapter1 = [
     // Scene 7: Zan diam, Ramalia menawarkan minuman
     {
         type: "dialogue",
-        background: "../images/backgrounds/bg-ramalia-house-interior.jpg",
-        character: "../images/characters/char-zan-normal.png",
+        background: "../images/backgrounds/rumah.png", // <--- PERUBAHAN NAMA FILE DI SINI
+        character: "../images/characters/zan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         name: "Narator",
         text: "Zan hanya mengangguk pelan, tidak langsung pergi. Ramalia, melihatnya masih terdiam dan mungkin kedinginan, menawarkan sesuatu.",
         next: 8
@@ -88,8 +88,8 @@ const storyChapter1 = [
     // Scene 8: Pilihan Zan (diputuskan oleh alur kita, yaitu Menerima)
     {
         type: "dialogue", // Ini akan kita simulasikan sebagai 'pilihan' internal game
-        background: "../images/backgrounds/bg-ramalia-house-interior.jpg",
-        character: "../images/characters/char-zan-normal.png",
+        background: "../images/backgrounds/rumah.png", // <--- PERUBAHAN NAMA FILE DI SINI
+        character: "../images/characters/zan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         name: "Ramalia",
         text: "Zan, apa kamu mau... masuk sebentar? Aku bisa buatkan teh hangat atau kopi. Kamu pasti kedinginan.",
         next: 9 // Lanjut ke adegan Zan menerima dan masuk rumah
@@ -97,8 +97,8 @@ const storyChapter1 = [
     // Scene 9: Zan Menerima Tawaran (awal Bab 2 secara konsep)
     {
         type: "dialogue",
-        background: "../images/backgrounds/bg-ramalia-house-interior.jpg",
-        character: "../images/characters/char-zan-normal.png",
+        background: "../images/backgrounds/rumah.png", // <--- PERUBAHAN NAMA FILE DI SINI
+        character: "../images/characters/zan.png", // <--- PERUBAHAN NAMA FILE DI SINI
         name: "Zan",
         text: "Boleh juga.",
         next: 999 // Indeks khusus untuk menandakan Akhir Bab 1 dan Transisi ke Bab 2
@@ -132,7 +132,7 @@ function loadScene(sceneIndex) {
 
     // --- Penanganan Akhir Bab / Ending ---
     if (sceneIndex === 500) { // Bad Ending Bab 1
-        backgroundElement.src = "../images/backgrounds/bg-rainy-night-street.jpg"; // Kembali ke scene halte
+        backgroundElement.src = "../images/backgrounds/jalan.png"; // <--- PERUBAHAN NAMA FILE DI SINI
         characterElement.style.opacity = 0; // Sembunyikan karakter
         characterNameElement.textContent = "";
         dialogueTextElement.textContent = scene.text;
