@@ -7,49 +7,48 @@ body {
     align-items: center; /* Pusatkan vertikal */
     min-height: 100vh; /* Memastikan body mengisi seluruh tinggi viewport */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font yang bersih dan modern */
-    color: #E0E0E0; /* Warna teks off-white, lebih lembut dari putih murni */
-    background-color: #1E2A3B; /* Latar belakang dark slate blue, lebih kaya dari hitam */
+    color: #F8F8F8; /* Warna teks off-white yang lebih cerah dan hangat */
+    background-color: #28252C; /* Biru keunguan gelap yang lembut dan hangat */
 }
 
 /* --- Gaya Khusus untuk Layar Judul (index.html) --- */
 #title-screen-container {
     position: relative;
-    width: 100vw; /* Lebar penuh viewport */
-    height: 100vh; /* Tinggi penuh viewport */
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    flex-direction: column; /* Elemen diatur secara kolom */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Latar belakang layar judul - SESUAIKAN DENGAN NAMA FILE DARI KAMU */
     background-image: url('images/backgrounds/bg-title-screen.jpg'); /* TETAP INI SESUAI SCREENSHOT */
-    background-size: cover; /* Pastikan gambar menutupi seluruh area */
-    background-position: center; /* Pusatkan gambar latar belakang */
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9); /* Efek bayangan pada teks yang lebih dalam */
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
 }
 
 #title-screen-container h1 {
-    font-size: 4.5em; /* Sedikit lebih besar */
-    margin-bottom: 40px; /* Jarak bawah dari tombol yang lebih lega */
-    color: #FFD700; /* Tetap emas, tapi akan terlihat lebih kontras dengan latar baru */
-    letter-spacing: 3px; /* Jarak antar huruf lebih renggang */
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9); /* Bayangan yang lebih kuat untuk judul */
+    font-size: 4.5em;
+    margin-bottom: 40px;
+    color: #FFD700; /* Tetap emas untuk judul utama, sangat cocok dengan tema hangat */
+    letter-spacing: 3px;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.9);
 }
 
 #start-game-button {
-    background-color: #4682B4; /* Warna steel blue yang lebih elegan */
-    color: #FFFFFF; /* Teks putih */
-    padding: 18px 45px; /* Padding sedikit lebih besar */
-    border: none; /* Hilangkan border default */
-    border-radius: 10px; /* Sudut tombol lebih membulat */
-    cursor: pointer; /* Kursor berubah jadi pointer saat diarahkan */
-    font-size: 2em; /* Ukuran font tombol lebih besar */
-    font-weight: bold; /* Teks tebal */
-    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Transisi lebih halus */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Efek bayangan tombol lebih kuat */
+    background-color: #6B575D; /* Warna plum-brown yang muted dan hangat */
+    color: #F8F8F8; /* Teks off-white */
+    padding: 18px 45px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 2em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
 }
 
 #start-game-button:hover {
-    background-color: #366E99; /* Warna steel blue lebih gelap saat hover */
-    transform: translateY(-3px); /* Tombol sedikit terangkat saat hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Bayangan lebih kuat saat hover */
+    background-color: #5A484D; /* Warna lebih gelap saat hover */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
