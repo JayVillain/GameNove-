@@ -4,5 +4,5 @@
   "gitdoc.message": "auto: update by GitDoc",
   "gitdoc.push": true,
   "gitdoc.pull": true,
-  "gitdoc.enabled": true
+  "gitdoc.enabled": false
 }
