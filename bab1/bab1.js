@@ -8,6 +8,9 @@ const choicesContainer = document.getElementById('choices-container');
 
 // --- Data Cerita Bab 1 (Versi Final) ---
 const storyChapter1 = [
+    // ... (Semua Scene sebelumnya dari Scene 0 hingga Scene 32 tetap sama) ...
+    // Saya akan menyertakan kode lengkapnya di bawah, namun fokus perubahan ada di Scene 33 dan loadScene.
+
     // Scene 0: Narasi - Hujan Deras di Perjalanan
     {
         type: "dialogue",
@@ -41,7 +44,7 @@ const storyChapter1 = [
         background: "../images/backgrounds/jalan.png",
         character: "", // Fokus pada Zan's internal thought
         name: "Narator",
-        text: "Zan mencoba mengingat kapan terakhir kali ia melihat Ramalia. Mungkin di aula besar, saat Ramalia memimpin diskusi panel. Atau di perpustakaan, dengan tumpukan buku di depannya. Mereka satu angkatan, bahkan beberapa mata kuliah pun sama. Tapi dunia mereka bagai kutub utara dan selatan. Ramalia yang teratur, Zan yang… berantakan. Pertemuan di tengah hujan seperti ini terasa sangat sureal. Ia menggeleng samar, mengusir pikiran itu. Tapi rasa penasaran tak bisa ditahannya.",
+        text: "Meskipun mereka satu kampus dan sering berpapasan, Zan tidak pernah menyangka akan bertemu Ramalia di situasi seperti ini. Gadis yang selalu terlihat sempurna di kelas, kini tampak... rentan.",
         next: 4
     },
     // Scene 4: Zan Memulai Sapaan Awal
@@ -326,9 +329,9 @@ const storyChapter1 = [
         text: "Ramalia akhirnya tertidur di halte, kedinginan dan kehujanan parah. Keesokan paginya, ia ditemukan oleh patroli keamanan kampus dalam keadaan demam tinggi dan harus dilarikan ke klinik. Dia melewatkan ujian penting dan harus mengulang semester. Hubungannya dengan Zan tidak pernah berkembang, dan mereka kembali menjadi dua orang asing yang kebetulan satu kampus. Sebuah keputusan kecil di malam hujan telah mengubah segalanya.",
         label: "BAD_ENDING_BAB1"
     },
-    // Scene 999: Transisi ke Bab 2
+    // Scene 999: Transisi ke Bab 2 (Ini adalah scene yang akan menampilkan tombol baru)
     {
-        type: "ending",
+        type: "ending", // Tetap type "ending" untuk memicu block khusus di loadScene
         text: "Malam itu, hujan telah menciptakan ikatan yang tak terduga di antara dua dunia yang berbeda. Sebuah pintu baru telah terbuka. Kisah Zan dan Ramalia baru saja dimulai.",
         label: "TRANSITION_TO_BAB2"
     }
@@ -336,7 +339,7 @@ const storyChapter1 = [
 
 let currentSceneIndex = 0;
 
-// Fungsi loadScene (tetap sama)
+// Fungsi loadScene (Perubahan ada di sini untuk Tombol Lanjut Bab 2)
 function loadScene(sceneIndex) {
     // Sembunyikan tombol "Lanjutkan" dan "Pilihan" secara default
     nextButton.style.display = 'block';
@@ -361,17 +364,25 @@ function loadScene(sceneIndex) {
         return;
     }
 
-    if (sceneIndex === 999) { // Transisi ke Bab 2
-        backgroundElement.src = scene.background || backgroundElement.src;
+    if (sceneIndex === 999) { // Transisi ke Bab 2 - Tampilkan tombol
+        backgroundElement.src = scene.background || backgroundElement.src; // Akan mengambil background terakhir
         characterElement.style.opacity = 0;
         characterNameElement.textContent = "";
-        dialogueTextElement.textContent = scene.text;
-        nextButton.style.display = 'none';
+        dialogueTextElement.textContent = scene.text; // Menampilkan narasi penutup Bab 1
+        nextButton.style.display = 'none'; // Sembunyikan tombol lanjutkan biasa
 
-        setTimeout(() => {
-             window.location.href = '../bab2/bab2.html';
-        }, 3000); // Tunggu 3 detik sebelum redirect
-        return;
+        // --- INI KODE BARU UNTUK TOMBOL LANJUT BAB 2 ---
+        const nextChapterButton = document.createElement('button');
+        nextChapterButton.classList.add('choice-button'); // Menggunakan gaya tombol pilihan
+        nextChapterButton.textContent = "Lanjut ke Bab 2";
+        nextChapterButton.onclick = () => {
+            window.location.href = '../bab2/bab2.html'; // Arahkan ke bab2.html
+        };
+        choicesContainer.appendChild(nextChapterButton);
+        choicesContainer.style.display = 'flex'; // Pastikan wadah pilihan terlihat
+        // --- AKHIR KODE BARU ---
+
+        return; // Hentikan eksekusi lebih lanjut
     }
 
     // --- Loading Scene Normal ---
